@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Brother</string>
+    <string name="why_joined">Why Joined:</string>
+    <string name="major_intro">Major: %1$s</string>
+    <string name="fun_fact">Fun Fact: %1$s</string>
+    <string name="crossed_semester">Joined: %1$s</string>
+
+    <string name="intro_header">Introduction</string>
+    <string name="intro_body">This app was by Sagar Atalatti and he is super awesome! Thank to hi I can make it well now.</string>
 </resources>

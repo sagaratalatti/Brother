@@ -24,7 +24,7 @@ public class OfflineBrotherService extends BaseInMemory {
 
         for (int i = 0; i < 32; i++){
             searchBrotherResponse.brotherList.add(new Brother(i, "Brother" + i,
-                    "Brother" + i + " Joined for Communication",
+                    "Brother" + i + "Brother" + i + " Joined for Communication",
                     "http://www.gravatar.com/avatar/" + i + "?d=identicon", "Android Developer",
                     "April 2017", "I <3 Programming" ));
         }

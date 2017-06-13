@@ -1,8 +1,10 @@
 package com.android.brother.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -13,6 +15,8 @@ import android.view.ViewGroup;
 
 import com.android.brother.R;
 import com.android.brother.activities.BaseActivity;
+import com.android.brother.activities.BrotherPagerActivity;
+import com.android.brother.activities.PracticeActivity;
 import com.android.brother.entities.Brother;
 import com.android.brother.services.BrotherServices;
 import com.android.brother.views.meetBrother.MeetBroAdapter;
@@ -67,6 +71,7 @@ public class MeetBroFragment extends BaseFragment implements MeetBroAdapter.onBr
 
     @Override
     public void onBrotherClicked(Brother brother) {
-        Log.i(TAG, brother.getBrotherName());
+        Intent intent = BrotherPagerActivity.newIntent(getActivity(), brother);
+        startActivity(intent);
     }
 }
