@@ -9,7 +9,6 @@ import android.support.v4.app.FragmentManager;
 
 import com.android.brother.R;
 import com.android.brother.entities.Brother;
-import com.android.brother.fragments.BrotherDetailFragment;
 
 /**
  * Created by sagar on 13-06-2017.
