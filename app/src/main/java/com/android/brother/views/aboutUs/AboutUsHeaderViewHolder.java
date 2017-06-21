@@ -1,6 +1,7 @@
 package com.android.brother.views.aboutUs;
 
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 
