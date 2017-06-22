@@ -1,4 +1,4 @@
-package com.android.brother.offline;
+package com.android.brother;
 
 import com.android.brother.entities.Brother;
 import com.android.brother.infrastructure.BrotherApplication;

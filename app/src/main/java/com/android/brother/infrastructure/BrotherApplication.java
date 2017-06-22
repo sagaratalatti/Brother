@@ -2,7 +2,7 @@ package com.android.brother.infrastructure;
 
 import android.app.Application;
 
-import com.android.brother.offline.Module;
+import com.android.brother.Module;
 import com.squareup.otto.Bus;
 
 /**
@@ -14,7 +14,7 @@ public class BrotherApplication extends Application {
     private Bus bus;
 
     public BrotherApplication() {
-        this.bus = new Bus();
+        bus = new Bus();
     }
 
     public static final String YOUTUBE_API = "AIzaSyB3iIJAoVfGCyeFolVGUIXQS2DOvDbJlYg";

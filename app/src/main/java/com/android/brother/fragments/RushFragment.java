@@ -1,5 +1,6 @@
 package com.android.brother.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -11,6 +12,8 @@ import android.view.ViewGroup;
 
 import com.android.brother.R;
 import com.android.brother.activities.BaseActivity;
+import com.android.brother.activities.CampusActivity;
+import com.android.brother.activities.MapActivity;
 import com.android.brother.entities.RushEvent;
 import com.android.brother.services.RushEventService;
 import com.android.brother.views.rush.Item;
@@ -54,7 +57,7 @@ public class RushFragment extends BaseFragment implements RushAdapter.OnRushList
         List<Item> data = rushAdapter.getData();
         social = new Item(RushAdapter.VIEW_TYPE_EXPANDABLE_HEADER, "Social Events");
         social.invisibleChildren = new ArrayList<>();
-        community = new Item(RushAdapter.VIEW_TYPE_EXPANDABLE_CHILD, "Community Events");
+        community = new Item(RushAdapter.VIEW_TYPE_EXPANDABLE_HEADER, "Community Events");
         community.invisibleChildren = new ArrayList<>();
         bus.post(new RushEventService.SearchRushEventCommunity("Hello"));
         bus.post(new RushEventService.SearchRushEventSocial("Hello"));
@@ -72,7 +75,13 @@ public class RushFragment extends BaseFragment implements RushAdapter.OnRushList
 
     @Override
     public void onRushClicked(RushEvent rushEvent) {
-
+        if (!rushEvent.isOnCampus()){
+            Intent intent = MapActivity.newIntent(getActivity(), rushEvent);
+            startActivity(intent);
+        } else {
+            Intent intent = CampusActivity.newIntent(getActivity(), rushEvent);
+            startActivity(intent);
+        }
     }
 
     @Subscribe

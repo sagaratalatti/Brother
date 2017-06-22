@@ -92,23 +92,15 @@ public class RushFooterHolder extends RecyclerView.ViewHolder {
 
     public void populate(Context context){
         Picasso.with(context).load(R.drawable.facebook)
-                .fit()
-                .centerCrop()
                 .into(facebook);
 
         Picasso.with(context).load(R.drawable.twitter)
-                .fit()
-                .centerCrop()
                 .into(twitter);
 
         Picasso.with(context).load(R.drawable.instagram)
-                .fit()
-                .centerCrop()
                 .into(instagram);
 
         Picasso.with(context).load(R.drawable.snapchat)
-                .fit()
-                .centerCrop()
                 .into(snapChat);
     }
 }

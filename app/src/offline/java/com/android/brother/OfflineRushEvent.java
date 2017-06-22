@@ -1,4 +1,4 @@
-package com.android.brother.offline;
+package com.android.brother;
 
 import com.android.brother.entities.RushEvent;
 import com.android.brother.infrastructure.BrotherApplication;
@@ -23,7 +23,7 @@ public class OfflineRushEvent extends BaseInMemory {
         searchRushEventCommunityResponse.communityRushEvents = new ArrayList<>();
 
         searchRushEventCommunityResponse.communityRushEvents.add(new RushEvent(1, "Rush Community Event 1",
-                "22/06/2017", "1:23pm", "Nisarg Co-Operative", 19.208860, 19.208860, true, "This is the dead lock region!"));
+                "22/06/2017", "1:23pm", "Nisarg Co-Operative", 19.208860, 19.208860, false, "This is the dead lock region!"));
         bus.post(searchRushEventCommunityResponse);
     }
 

@@ -125,7 +125,7 @@ public class AboutUsAdapter extends RecyclerView.Adapter {
         }
 
         else if (viewType == VIEW_TYPE_BROTHERHOOD){
-            final  BrotherHoodViewHolder brotherHoodViewHolder = new BrotherHoodViewHolder(eventCardView);
+            final  BrotherHoodViewHolder brotherHoodViewHolder = new BrotherHoodViewHolder(headerView);
             brotherHoodViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -151,7 +151,7 @@ public class AboutUsAdapter extends RecyclerView.Adapter {
         }
 
         else if (viewType == VIEW_TYPE_HEADER){
-            return new AboutUsHeaderViewHolder(eventCardView);
+            return new AboutUsHeaderViewHolder(headerView);
         }
 
         throw new IllegalArgumentException(viewType + "is not supported in this adapter");

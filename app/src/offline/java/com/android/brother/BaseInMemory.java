@@ -1,4 +1,4 @@
-package com.android.brother.offline;
+package com.android.brother;
 
 import com.android.brother.infrastructure.BrotherApplication;
 import com.squareup.otto.Bus;
@@ -15,5 +15,6 @@ public class BaseInMemory {
     public BaseInMemory(BrotherApplication brotherApplication) {
         this.brotherApplication = brotherApplication;
         this.bus = brotherApplication.getBus();
+        bus.register(this);
     }
 }

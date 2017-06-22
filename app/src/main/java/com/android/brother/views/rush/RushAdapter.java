@@ -117,21 +117,21 @@ public class RushAdapter extends RecyclerView.Adapter {
                         int count = 0;
                         int position = data.indexOf(itemController.refferalItem);
 
-                        while (data.size()>position+1 && data.get(position + 1).type == VIEW_TYPE_EXPANDABLE_CHILD){
-                            item.invisibleChildren.add(data.remove(position+1));
-                            count++;
+                        while (data.size() > position +1 && data.get(position + 1).type == VIEW_TYPE_EXPANDABLE_CHILD){
+                            item.invisibleChildren.add(data.remove(position +1));
+                            count ++;
                         }
-                        notifyItemRangeRemoved(position+1, count);
+                        notifyItemRangeRemoved(position +1, count);
                         itemController.headerToggle.setImageResource(R.mipmap.open);
                     } else {
                         int position = data.indexOf(itemController.refferalItem);
-                        int index = position+1;
+                        int index = position +1;
 
                         for (Item item1 : item.invisibleChildren){
                             data.add(index, item1);
-                            index++;
+                            index ++;
                         }
-                        notifyItemRangeRemoved(position+1, index-position-1);
+                        notifyItemRangeInserted(position +1, index - position - 1);
                         itemController.headerToggle.setImageResource(R.mipmap.close);
                         item.invisibleChildren = null;
                     }
