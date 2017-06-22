@@ -10,6 +10,8 @@ import java.util.List;
 
 public class EventService {
 
+    private EventService(){}
+
     public static class  SearchCommunityServiceRequest{
 
         public String firebaseUrl;

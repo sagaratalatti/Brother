@@ -24,6 +24,14 @@
         <activity android:name=".activities.BrotherPagerActivity"
             android:screenOrientation="portrait"
             android:theme="@style/CustomDialogActivity"/>
+
+        <activity android:name=".activities.PhotoPagerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomDialogActivity"/>
+
+        <activity android:name=".activities.YoutubeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/YouTubeDialogActivity"/>
     </application>
 
 </manifest>

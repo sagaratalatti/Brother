@@ -1,5 +1,6 @@
 package com.android.brother.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -12,6 +13,8 @@ import android.view.ViewGroup;
 
 import com.android.brother.R;
 import com.android.brother.activities.BaseActivity;
+import com.android.brother.activities.PhotoPagerActivity;
+import com.android.brother.activities.YoutubeActivity;
 import com.android.brother.entities.EventCard;
 import com.android.brother.services.EventService;
 import com.android.brother.views.aboutUs.AboutUsAdapter;
@@ -62,9 +65,11 @@ public class AboutUsFragment extends BaseFragment implements AboutUsAdapter.Abou
     @Override
     public void onEventClicked(EventCard eventCard) {
         if (!eventCard.isVideo()){
-            Log.i(TAG, eventCard.getEventName() + "is slide show");
+            Intent intent = PhotoPagerActivity.newIntent(getActivity(), eventCard);
+            startActivity(intent);
         } else {
-            Log.i(TAG, eventCard.getEventName() + "is Video");
+            Intent intent = YoutubeActivity.newIntent(getActivity(), eventCard);
+            startActivity(intent);
         }
     }
 

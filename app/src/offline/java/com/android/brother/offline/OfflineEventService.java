@@ -29,8 +29,8 @@ public class OfflineEventService extends BaseInMemory {
 
         response.communityService.add(new EventCard(2,
                 "Community Event 2", "Community Event 2's Description",
-                "http://www.gravatar.com/avatar/" + 2 + "?d=identicon", false,
-                "null"));
+                "http://www.gravatar.com/avatar/" + 2 + "?d=identicon", true,
+                "ZeaIvjoH1FY"));
 
         bus.post(response);
     }
@@ -48,7 +48,7 @@ public class OfflineEventService extends BaseInMemory {
         response.brotherService.add(new EventCard(4,
                 "Brother Event 2", "Brother Event 2's Description",
                 "http://www.gravatar.com/avatar/" + 4 + "?d=identicon", true,
-                "null"));
+                "aHjpOzsQ9YI"));
 
         bus.post(response);
     }
@@ -66,7 +66,7 @@ public class OfflineEventService extends BaseInMemory {
         response.socialService.add(new EventCard(6,
                 "Social Event 2", "Social Event 2's Description",
                 "http://www.gravatar.com/avatar/" + 6 + "?d=identicon", true,
-                "null"));
+                "60ItHLz5WEA"));
 
         bus.post(response);
     }

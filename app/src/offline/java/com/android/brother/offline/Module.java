@@ -11,5 +11,7 @@ public class Module {
     public static void Register(BrotherApplication brotherApplication){
         new OfflineBrotherService(brotherApplication);
         new OfflineEventService(brotherApplication);
+        new OfflinePictureService(brotherApplication);
+        new OfflineRushEvent(brotherApplication);
     }
 }

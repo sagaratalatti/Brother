@@ -17,6 +17,8 @@ public class BrotherApplication extends Application {
         this.bus = new Bus();
     }
 
+    public static final String YOUTUBE_API = "AIzaSyB3iIJAoVfGCyeFolVGUIXQS2DOvDbJlYg";
+
     @Override
     public void onCreate() {
         super.onCreate();

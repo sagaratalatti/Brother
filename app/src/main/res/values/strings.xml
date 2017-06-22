@@ -7,4 +7,9 @@
 
     <string name="intro_header">Introduction</string>
     <string name="intro_body">This app was by Sagar Atalatti and he is super awesome! Thank to hi I can make it well now.</string>
+
+    <string name="follows_us">Follow Us On Social Media</string>
+    <string name="rush_intro">What is Rush?</string>
+    <string name="rush_explained">Rush is Requirement</string>
+    <string name="rush_event">Rush Events</string>
 </resources>
